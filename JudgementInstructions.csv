@@ -1,0 +1,11 @@
+Variable,Method,Regex
+TypeCaseJudgment,extractJudgementCode,(?i)Disposition:( ?)([A-Z]+)
+DamagesAwarded,extractDigits,"(?i)(\$([0-9.,]+)( ?)(Total Amount of Damages and Costs|Total Judgment|Total Award|Total Damages)|(Total Amount of Damages and Costs|Total Judgment|Total Award|Total Damages):( ?)\$([0-9,.]+))"
+PaymentStartDate,extractDate,(?i)beginning ([0-9_\/-]+)
+PaymentInterval,,(?i)(weekly|monthly|bi-weekly|biweekly|week|month)
+InstallmentAmount,extractDigits,"(?i)payments of( *)(_*)\$(_*)([0-9.,]+)(_*)"
+PreJudgmentInterest,extractDigits,"(?i)prejudgment( *)interest(:*)( *)([0-9.,]+)(%*)"
+PostJudgmentInterestAwarded,extractDigits,(?i)post-judgment interest:( *)(_*)x(_*)( *)(.*)\;
+PostJudgmentInterestAmount,extractDigits,"(?i)interest(.*)([0-9.,]+)(_*)%"
+NoAbilityToPayAgreed,,(?i)(no ability to pay|afford|income)
+TotalAward,extractDigits,"(?i)(\$([0-9.,]+)( ?)(Total Amount of Damages and Costs|Total Judgment|Total Award|Total Damages)|(Total Amount of Damages and Costs|Total Judgment|Total Award|Total Damages):( ?)\$([0-9,.]+))"
